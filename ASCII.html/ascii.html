@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>FoC</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="../css/styles.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+img {
+  float: left;
+ padding-right: 40px; 
+ padding-left: 40px;
+ padding-bottom: 40px;
+ 
+}
+.button {
+  background-color: #008CBA; /* Blue */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+.background {
+background-image: url(../assets/img/overthere.jpg);
+background-size: cover;
+background-attachment: fixed;
+background-repeat: no-repeat;
+background-position: center;
+height: 200vh;
+}
+.main_content{
+  color: cornsilk;
+  padding: 100px 20px;
+  position:absolute; top: 40%; width: 95%; text-align: center;
+}
+</style>
+</style>
+</head>
+<body>
+
+<section>
+<hr>	
+
+
+<p>
+    <div class="background">  </div>
+    <div class="main_content">
+  <img src="ascii.png" style="width:792px;height:528px;"></p>
+        
+			
+
+<p></p>
+<p></p>         
+
+
+<p>Enter any number from 0 to 127 :</p>
+<input id="inputdec" >
+<p></p>
+<button onclick="decToASCII()">Submit</button>
+<p></p>
+<p>ASCII Value : </p>
+<p id="demo"></p>
+<script>
+function decToASCII() {
+  x = document.getElementById("inputdec").value;
+  var res = String.fromCharCode(x);
+  document.getElementById("demo").innerHTML = res;
+  console.log(res);
+}
+</script>
+
+
+
+</section>
+
+<a class="btn btn-primary" href="/index.html">pack up and go back</a>   
+
+
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/gates.css">
+    
+    <title>gates</title>
+</head>
+<body>
+    <header>
+
+   
+            </div>
+        </nav>
+    </header>
+
+    <section>
+        <h1>The XOR Gate!</h1>
+        <div class="backgroundGates"></div>
+        <div class="container">
+            <div class="inputs">
+                <div class="input1">
+                    <span id="input-message1">OFF</span>
+                    <div id="btn1"></div>
+                </div>
+                <div class="input1">
+                    <span id="input-message2">OFF</span>
+                    <div id="btn2"></div>
+                </div>
+            </div>
+            <div class="image"></div>
+            <div id="output"></div>
+            <span id="output-message">OFF</span>
+        </div>
+    </section>
+
+
+    <script>
+        function myFunction(x) {
+          x.classList.toggle("change");
+        }
+
+        const body = document.body;
+        let lastScroll = 0;
+
+        window.addEventListener("scroll", () => {
+            const currentScroll = window.pageYOffset
+
+            if (currentScroll <= 0) {
+                body.classList.remove("scroll-up");
+            }
+
+            if (currentScroll > lastScroll && !body.classList.contains("scroll-down")) {
+                body.classList.remove("scroll-up")
+                body.classList.add("scroll-down");
+            }
+
+            if (currentScroll < lastScroll && body.classList.contains("scroll-down")) {
+                body.classList.remove("scroll-down")
+                body.classList.add("scroll-up")
+            }
+
+
+
+            lastScroll = currentScroll;
+        })
+    </script>
+    <script src="../../../main.js"></script>
+    <script src="js/xorgate.js"></script>
+    
+    
+</body>
+<a class="btn btn-primary" href="index.html">pack up and go back
+</html>

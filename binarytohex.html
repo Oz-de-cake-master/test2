@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title> Binary to Hexidecimal translator </title>
+
+<link rel="stylesheet" type="text/css" href="css/styles.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+img {
+  float: left;
+ padding-right: 0px; 
+ padding-left: 0px;
+ padding-bottom: 0px;
+}
+</style>
+</head>
+<body>
+
+<section>
+<hr>	
+<img class="img-fluid" src="assets/img/hex.jpg" alt="..." />
+ <div class="background">  </div>
+ <div class="main_content">
+
+  Enter any binary number (4-digit minimum):
+  <input type="number" id="inputBin" value="">
+
+
+
+  <button onclick="binToHex()">Submit</button>
+  
+  <p>Hexidecimal Value : </p>
+  <p id="demo"></p>
+
+
+
+  
+  </div>
+
+
+         
+
+
+<script>
+function binToHex() {
+  var x = document.getElementById("inputBin").value;
+  var hexOut = parseInt(x , 2).toString(16).toUpperCase();
+  document.getElementById("demo").innerHTML = hexOut;
+  }
+  
+</script>
+
+
+
+</section>
+
+</body>
+<a class="btn btn-primary" href="index.html">pack up and go back</a>      <a class="btn btn-primary" href="ML.html/machinelearning.html">or take a one-way trip to Machine Language!</a> <a class="btn btn-primary" href="ASCII.html/ascii.html">ooor one-way trip to  ASCII!!</a>           
+
+
+</html>
+

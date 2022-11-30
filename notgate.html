@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/gates.css">
+    <link rel="stylesheet" href="css/styles.css">
+
+    <title>Not Gate</title>
+</head>
+<body>
+    <header>
+     
+          
+        </nav>
+    </header>
+
+    <section>
+        <h1>The NOT Gate</h1>
+        <div class="backgroundGates"></div>
+        <div class="container">
+            <span id="input-message">OFF</span>
+            <div id="input"></div>
+            <div id="image"></div>
+            <div class="clicked-output" id="output"></div>
+            <span id="output-message">ON</span>
+        </div>
+    </section>
+    <script>
+        function myFunction(x) {
+          x.classList.toggle("change");
+        }
+
+        const body = document.body;
+        let lastScroll = 0;
+
+        window.addEventListener("scroll", () => {
+            const currentScroll = window.pageYOffset
+
+            if (currentScroll <= 0) {
+                body.classList.remove("scroll-up");
+            }
+
+            if (currentScroll > lastScroll && !body.classList.contains("scroll-down")) {
+                body.classList.remove("scroll-up")
+                body.classList.add("scroll-down");
+            }
+
+            if (currentScroll < lastScroll && body.classList.contains("scroll-down")) {
+                body.classList.remove("scroll-down")
+                body.classList.add("scroll-up")
+            }
+
+
+
+            lastScroll = currentScroll;
+        })
+        </script>
+
+        <script src="js/gatescript.js"> </script>
+    <script src="js/scripts.js"></script>
+</body>
+<a class="btn btn-primary" href="index.html">pack up and go back</a> <a class="btn btn-primary" href="orgate.html">Or go check out the ORgate!</a> 
+
+
+</html>
